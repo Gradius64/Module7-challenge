@@ -1,14 +1,61 @@
 ///GIVEN a command-line application that accepts user input
+
+
+
 const inquirer = require('inquirer');
-const fs = require('fs');
+{
+   
+    
+
+    
+  
+
+
+
 console.log('my js');
+
+console.log('Drakebaugh6@gmail.com')
+
+
 
 function askforInput() {
     inquirer.prompt([
+  
+        
+       
         {
+            type: 'input',
+            name: 'Contribution',
+            message: 'What is the contribution guidelines?',
+
+            
+
+            
+            
+
+           
+
+
+        
+        
+
+        
+        
+        
+
+        
+        
             type: 'input',
             name: 'projectTitle',
             mesage: 'What is the title of your Project?',
+
+            
+                   
+
+            
+            
+
+
 
         },
         
@@ -16,6 +63,22 @@ function askforInput() {
                 type: 'input',
                 name: 'description',
                 message: 'Please provide a description of your project:',
+            },
+
+            {
+                type: 'input',
+                name: 'greeting',
+                message: 'What would you like to say?'
+
+                
+
+
+            },
+
+            {
+                type: 'input',
+                name: 'Github',
+                message: 'What is my Github username?',
             },
 
 
@@ -30,6 +93,25 @@ function askforInput() {
                 name: 'Usage',
                 message: 'What is the Usage?',
 
+                type: 'greeting',
+                name: 'what do you want to type?',
+                mesage: 'input',
+
+                
+                
+                name: 'greeting',
+                message: 'What would you like to say?',
+                type: 'input'
+
+                
+                
+                
+
+                
+               
+   
+
+                
 
 
 
@@ -37,8 +119,14 @@ function askforInput() {
 
             {
                 type: 'input',
-                name: 'License',
-                message: 'What is the license?'
+                name: 'Email',
+                message: 'What is the email?'
+
+                
+                    
+                   
+
+               
 
 
             },
@@ -60,14 +148,19 @@ function askforInput() {
             {
 
                 /// Choose the license from the list
-                type: 'input',
+                type: 'list',
                 name: 'license',
-                message: 'Choose a license from the list!'
+                message: 'Choose a license from the list!',
+                choices:["MIT","ISC","APACHE 2.0","GPL"]
 
             }
 
+           
+
             
 
+            
+            
 
             
             // Add more prompts as needed
@@ -84,22 +177,10 @@ function askforInput() {
 
     
 
-// Read file asynchronously
-fs.readFile('index1.js', 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading the file:', err);
-    return;
-  }
-  console.log('File contents:', data);
-});
+
     
     
-
-
     // Start the application
     askforInput();
 
-   
-
-
-
+}
